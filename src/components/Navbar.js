@@ -1,6 +1,12 @@
 import React from 'react'
 import { useStaticQuery, graphql, Link } from "gatsby"
 
-const Navbar = () => {}
+const Navbar = () => {
+    return (
+        <>
+        navbar
+        </>
+    )
+}
 
 export default Navbar
