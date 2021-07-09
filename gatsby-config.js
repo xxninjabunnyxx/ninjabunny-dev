@@ -1,7 +1,12 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
-    title: "mdx",
+    siteUrl: "https://www.ninjabunny.dev",
+    title: "NinjaBunny",
+    socials: [
+      { link: "https://github.com/xxninjabunnyxx", icon: "github"},
+      { link: "https://instagram.com/ryurampage", icon: "instagram"},
+      { link: "https://twitter.com/xxninjabunnyxx", icon: "twitter"}
+    ]
   },
   plugins: [
     "gatsby-plugin-image",
