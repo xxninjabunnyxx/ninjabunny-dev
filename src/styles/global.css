@@ -1,3 +1,28 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import 'navbar.css';
+
+@font-face {
+    font-family: "Futura";
+    src: url("../fonts/Futura\ Oblique\ Font.otf");
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("../fonts/Roboto-Regular.ttf");
+}
+
+.top-font {
+    font-family: "Futura", Arial, sans-serif;
+    font-weight: normal;
+    font-size: normal;
+}
+
+body {
+    background-color: #f9fafb;
+    font-family: "Roboto", Arial, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+}
