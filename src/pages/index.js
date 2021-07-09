@@ -1,11 +1,11 @@
 import React from "react"
-import Navbar from '../components/Navbar'
+import Layout from '../components/Layout'
 
 const IndexPage = () => {
   return (
-    <Navbar>
+    <Layout>
       homepage
-    </Navbar>
+    </Layout>
   )
 }
 
