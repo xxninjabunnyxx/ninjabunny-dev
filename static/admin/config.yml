@@ -1,12 +1,11 @@
 backend:
   name: git-gateway
-  branch: main # Branch to update (optional; defaults to master)
+  branch: main
 
 local_backend: true
 
-
-media_folder: static/img
-public_folder: /img
+media_folder: src/content/images
+public_folder: src/content/images
 
 collections:
   - name: 'blog'
@@ -14,7 +13,8 @@ collections:
     folder: 'src/content/blog'
     create: true
     slug: '{{title}}'
-    media_folder: 'src/content/images'
+    media_folder: '../images'
+    public_folder: '../images'
     editor:
       preview: false
     fields:
@@ -33,3 +33,23 @@ collections:
           - { label: "GitHub", name: "github", widget: "string", required: false }
           - { label: "Instagram", name: "instagram", widget: "string", required: false }
           - { label: "Twitter", name: "twitter", widget: "string", required: false }
+      - label: 'Banner'
+        name: 'banner'
+        create: true
+        file: './src/settings/banner.json'
+        allow_multiple: false
+        fields:
+          - { label: "Image", name: "banner", widget: "image" }
+      - label: 'Site Title'
+        name: 'site_title'
+        file: './src/settings/site_title.json'
+        fields:
+          - { label: "Site Title", name: "site_title", widget: "string", default: 'Site' }
+      - label: 'Favicon'
+        name: 'favicon'
+        create: true
+        file: './src/settings/favicon.json'
+        allow_multiple: false
+        fields:
+          - { label: "Image", name: "favicon", widget: "image" }
+
