@@ -1,3 +1,5 @@
+const { favicon } = require('./src/settings/favicon.json')
+
 module.exports = {
   siteMetadata: {
     title: `NinjaBunny`,
@@ -42,5 +44,14 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-gatsby-cloud`,
+    'gatsby-plugin-postcss',
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        start_url: "/",
+        icon: `${ './' + favicon}`,
+        crossOrigin: `use-credentials`,
+      }
+    }
   ],
 }
