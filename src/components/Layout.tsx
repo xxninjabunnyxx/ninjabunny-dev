@@ -1,13 +1,13 @@
 import React from "react"
 import Navbar from "./Navbar"
 
-const Layout: React.FC = ({children}) => {
-return (
+const Layout: React.FC = ({ children }) => {
+  return (
     <>
-    <Navbar />
-    {children}
+      <Navbar />
+      {children}
     </>
-)
+  )
 }
 
 export default Layout

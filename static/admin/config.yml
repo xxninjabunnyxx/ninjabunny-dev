@@ -25,10 +25,10 @@ collections:
       - { label: 'Body', name: 'body', widget: 'markdown' }
   - name: 'settings'
     label: 'Settings'
+    file: './src/settings/setting.json'
     files:
       - label: 'Social Info'
         name: 'social_info'
-        file: './src/settings/social_info.json'
         fields:
           - { label: "GitHub", name: "github", widget: "string", required: false }
           - { label: "Instagram", name: "instagram", widget: "string", required: false }
@@ -36,19 +36,16 @@ collections:
       - label: 'Banner'
         name: 'banner'
         create: true
-        file: './src/settings/banner.json'
         allow_multiple: false
         fields:
           - { label: "Image", name: "banner", widget: "image" }
       - label: 'Site Title'
         name: 'site_title'
-        file: './src/settings/site_title.json'
         fields:
           - { label: "Site Title", name: "site_title", widget: "string", default: 'Site' }
       - label: 'Favicon'
         name: 'favicon'
         create: true
-        file: './src/settings/favicon.json'
         allow_multiple: false
         fields:
           - { label: "Image", name: "favicon", widget: "image" }

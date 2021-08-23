@@ -1,9 +1,8 @@
 const path = require(`path`)
 const slugify = require("slugify")
 
-const createPages = async () => {}
+const createBlogPages = async () => {}
 
 exports.createPages = async ({ graphql, actions }) => {
-  await Promise.all([
-  ])
+  await Promise.all([createBlogPages()])
 }

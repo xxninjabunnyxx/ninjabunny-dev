@@ -1,8 +1,8 @@
-const { favicon } = require('./src/settings/favicon.json')
+const { favicon, siteTitle } = require("./src/settings/settings.json")
 
 module.exports = {
   siteMetadata: {
-    title: `NinjaBunny`,
+    title: siteTitle,
     author: {
       name: `NinjaBunny`,
     },
@@ -44,14 +44,14 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-gatsby-cloud`,
-    'gatsby-plugin-postcss',
+    "gatsby-plugin-postcss",
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
         start_url: "/",
-        icon: `${ './' + favicon}`,
+        icon: `${"./" + favicon}`,
         crossOrigin: `use-credentials`,
-      }
-    }
+      },
+    },
   ],
 }

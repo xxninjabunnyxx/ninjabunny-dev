@@ -10,13 +10,18 @@ import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
 type Props = {
-  description: string,
-  lang: string,
-  meta: [],
+  description: string
+  lang: string
+  meta: []
   title: string
 }
 
-const SEO = ({ description = `` , lang = `en`, meta = [] , title }: Props): JSX.Element => {
+const SEO = ({
+  description = ``,
+  lang = `en`,
+  meta = [],
+  title,
+}: Props): JSX.Element => {
   const { site } = useStaticQuery(
     graphql`
       query {
