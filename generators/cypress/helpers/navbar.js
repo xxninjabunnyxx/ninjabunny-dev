@@ -1,4 +1,4 @@
-const { siteTitle } = require("../../../src/settings/settings.json")
+//const { site_title } = require("../../../src/settings/site_title.json")
 
 const navbarHelper = () => {
   helperString = ``
@@ -9,7 +9,7 @@ const navbarHelper = () => {
     `
   //helperString += `
   //  it('Logo text should be the the same that is in the settings.', () => {
-  //      cy.get('[cy-data="logo-text"]').should('have.text', ${siteTitle})
+  //      cy.get('[cy-data="logo-text"]').should('have.text', ${site_title})
   //  })
   //  `
   //helperString += `
