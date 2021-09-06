@@ -4,4 +4,3 @@
 npm run generate
 npm run lint -- --fix
 npm run format
-npm run test:e2e:ci
