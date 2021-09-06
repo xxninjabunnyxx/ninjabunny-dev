@@ -1,5 +1,6 @@
 const { site_title } = require("./src/settings/site_title.json")
 const { favicon } = require("./src/settings/favicon.json")
+
 module.exports = {
   siteMetadata: {
     title: site_title,
