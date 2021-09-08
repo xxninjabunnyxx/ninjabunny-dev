@@ -1,11 +1,11 @@
 {
   "name": "gatsby-starter-blog",
   "private": true,
-  "description": "A starter for a blog powered by Gatsby and Markdown",
+  "description": "A blog powered by Gatsby and Markdown",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "NinjaBunny",
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/xxninjabunnyxx/ninjabunny-dev/issues"
   },
   "dependencies": {
     "@react-icons/all-files": "^4.1.0",
@@ -44,8 +44,6 @@
     "@typescript-eslint/eslint-plugin": "^4.29.2",
     "@typescript-eslint/parser": "^4.29.2",
     "autoprefixer": "^10.3.1",
-    "cypress": "^8.3.0",
-    "cypress-axe": "^0.13.0",
     "eslint": "^7.32.0",
     "eslint-plugin-react": "^7.24.0",
     "husky": "^7.0.1",
@@ -55,14 +53,14 @@
     "start-server-and-test": "^1.13.1",
     "typescript": "^4.3.5"
   },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
+  "homepage": "https://github.com/xxninjabunnyxx/ninjabunny-dev#readme",
   "keywords": [
     "gatsby"
   ],
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
+    "url": "git+https://github.com/xxninjabunnyxx/ninjabunny-dev.git"
   },
   "scripts": {
     "build": "gatsby build",
@@ -71,13 +69,8 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "cy:open": "cypress open",
-    "cy:run": "cypress run",
-    "test:e2e": "start-server-and-test develop http://localhost:8000 cy:open",
-    "test:e2e:ci": "start-server-and-test develop http://localhost:8000 cy:run",
     "prepare": "husky install",
     "lint": "npx eslint ./src",
-    "generate": "node ./generators/run.js",
     "server:local": "npx netlify-cms-proxy-server"
   }
 }
