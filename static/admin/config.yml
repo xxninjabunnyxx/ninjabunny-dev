@@ -23,6 +23,11 @@ collections:
       - { label: 'Description', name: 'description', widget: 'string' }
       - { label: 'Published', name: 'published', widget: "boolean", default: false }
       - { label: 'Body', name: 'body', widget: 'markdown' }
+      - label: "Tags"
+        name: "tags"
+        widget: "select"
+        multiple: true
+        options: []
   - name: 'settings'
     label: 'Settings'
     files:
@@ -34,13 +39,6 @@ collections:
           - { label: "GitHub", name: "github", widget: "string", required: false }
           - { label: "Instagram", name: "instagram", widget: "string", required: false }
           - { label: "Twitter", name: "twitter", widget: "string", required: false }
-      - label: 'Banner'
-        name: 'banner'
-        file: './src/settings/banner.json'
-        create: true
-        allow_multiple: false
-        fields:
-          - { label: "Image", name: "banner", widget: "image" }
       - label: 'Site Title'
         name: 'site_title'
         file: './src/settings/site_title.json'
