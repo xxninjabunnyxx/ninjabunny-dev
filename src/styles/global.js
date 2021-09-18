@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from "styled-components"
 import Roboto from "../fonts/Roboto-Regular.ttf"
 import Futura from "../fonts/Futura-Oblique-Font.otf"
 const Global = createGlobalStyle`
@@ -21,6 +21,6 @@ const Global = createGlobalStyle`
     font-style: normal;
     font-size: 1.125rem;
   }
-`;
- 
-export default Global;
+`
+
+export default Global
