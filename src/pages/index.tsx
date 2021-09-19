@@ -8,7 +8,7 @@ const HomePage: React.FC = () => {
   return (
     <Layout>
       <SEO title="Home" />
-      home
+      Coming Soon
     </Layout>
   )
 }

@@ -1,8 +1,7 @@
-const { site_title } = require("./src/settings/site_title.json")
-const { favicon } = require("./src/settings/favicon.json")
+
 module.exports = {
   siteMetadata: {
-    title: site_title,
+    title: "NinjaBunny",
     author: {
       name: `NinjaBunny`,
     },
@@ -10,7 +9,6 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-image`,
-    `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -49,7 +47,7 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         start_url: "/",
-        icon: `${"./" + favicon}`,
+        icon: `./src/content/images/square.png`,
         crossOrigin: `use-credentials`,
       },
     },
