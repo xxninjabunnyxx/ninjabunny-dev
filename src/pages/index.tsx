@@ -9,7 +9,9 @@ const HomePage: React.FC = () => {
   return (
     <Layout>
       <SEO title="Home" />
+      <PlaceholderStyle>
       <div>Coming Soon</div>
+      </PlaceholderStyle>
     </Layout>
   )
 }
