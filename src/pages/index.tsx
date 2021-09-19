@@ -1,6 +1,6 @@
 import * as React from "react"
 //import { Link, graphql } from "gatsby"
-import styled from 'styled-components'
+import styled from "styled-components"
 
 import Layout from "../components/Layout"
 import SEO from "../components/SEO"
@@ -17,7 +17,7 @@ const HomePage: React.FC = () => {
 }
 
 const PlaceholderStyle = styled.div`
-display: flex;
-justify-content: center;
+  display: flex;
+  justify-content: center;
 `
 export default HomePage
