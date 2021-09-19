@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Ninjabunny',
+    title: "Ninjabunny",
     author: {
       name: `NinjaBunny`,
     },
@@ -46,7 +46,7 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         start_url: "/",
-        icon: `${"./" + favicon}`,
+        icon: "./src/content/images/square.png",
         crossOrigin: `use-credentials`,
       },
     },
