@@ -10,7 +10,7 @@ const HomePage: React.FC = () => {
     <Layout>
       <SEO title="Home" />
       <PlaceholderStyle>
-      <div>Coming Soon</div>
+        <div>Coming Soon</div>
       </PlaceholderStyle>
     </Layout>
   )

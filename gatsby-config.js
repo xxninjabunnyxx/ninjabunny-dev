@@ -4,6 +4,17 @@ module.exports = {
     author: {
       name: `NinjaBunny`,
     },
+    socials: [
+      { link: "https://github.com/xxninjabunnyxx", icon: "github" },
+      { link: "https://instagram.com/ryurampage", icon: "instagram" },
+      { link: "https://twitter.com/xxninjabunnyxx", icon: "twitter" },
+    ],
+    colors: {
+      light: "#fff",
+      dark: "#000",
+      primary: "#B22176",
+      secondary: "#DDCBFF",
+    },
     siteUrl: `https://ninjabunny.dev`,
   },
   plugins: [
