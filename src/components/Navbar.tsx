@@ -4,7 +4,7 @@ import styled from "styled-components"
 import Social from "./Social"
 import { v4 as uuidv4 } from "uuid"
 import banner from "../content/images/banner.jpg"
-import StyledInternalLink from "../styles/StyledInternalLink"
+import StyledInternalLink from "../components/StyledInternalLink"
 
 const Navbar: React.FC = () => {
   const query = useStaticQuery(graphql`
