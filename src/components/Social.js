@@ -6,7 +6,7 @@ import { FaInstagram } from "@react-icons/all-files/fa/FaInstagram"
 import { FaTwitter } from "@react-icons/all-files/fa/FaTwitter"
 import styled from "styled-components"
 
-const Social = ({ icon, link, id }: any) => {
+const Social = ({ icon, link, id }) => {
   const query = useStaticQuery(graphql`
     query SocialQuery {
       site {
@@ -48,7 +48,7 @@ const Social = ({ icon, link, id }: any) => {
   )
 }
 
-const Style = styled.a<{ color: string }>`
+const Style = styled.a`
   text-decoration: none;
   color: ${props => props.color};
   font-size: 1.875rem;
@@ -59,7 +59,6 @@ const Style = styled.a<{ color: string }>`
   transition-property: all;
   transition-duration: 300ms;
   transition-timing-function: ease-in-out;
-
   &:hover {
     transform: scale(1.25);
   }
