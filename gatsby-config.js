@@ -1,65 +1,79 @@
 module.exports = {
   siteMetadata: {
+    siteUrl: "https://www.ninjabunny.dev",
     title: "NinjaBunny",
-    author: {
-      name: `NinjaBunny`,
-    },
     socials: [
       { link: "https://github.com/xxninjabunnyxx", icon: "github" },
       { link: "https://instagram.com/ryurampage", icon: "instagram" },
       { link: "https://twitter.com/xxninjabunnyxx", icon: "twitter" },
     ],
     colors: {
-      light: "#fff",
-      dark: "#000",
-      primary: "#B22176",
-      secondary: "#DDCBFF",
+      light: {
+        h: `0`,
+        s: `100%`,
+        l: `100%`,
+        a: `1`,
+      },
+      dark: {
+        h: `0`,
+        s: `0%`,
+        l: `0%`,
+        a: `1`,
+      },
+      primary: {
+        h: `326`,
+        s: `100%`,
+        l: `50%`,
+        a: `1`,
+      },
+      secondary: {
+        h: `261`,
+        s: `100%`,
+        l: `90%`,
+        a: `1`,
+      },
     },
-    siteUrl: `https://ninjabunny.dev`,
+    categories: [
+      { name: `Blog`, path: `/blog` },
+      { name: `About`, path: `/about` },
+      { name: `Projects`, path: `/projects` },
+    ],
   },
   plugins: [
-    `gatsby-plugin-image`,
-    `gatsby-plugin-styled-components`,
+    "gatsby-plugin-styled-components",
+    "gatsby-plugin-image",
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: "gatsby-plugin-manifest",
       options: {
-        path: `${__dirname}/src/content/`,
-        name: `content`,
+        icon: "src/images/square.png",
       },
     },
+    "gatsby-plugin-mdx",
+    "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
     {
-      resolve: `gatsby-transformer-remark`,
+      resolve: "gatsby-source-filesystem",
       options: {
-        plugins: [
-          {
-            resolve: `gatsby-remark-images`,
-            options: {
-              maxWidth: 630,
-            },
-          },
-          {
-            resolve: `gatsby-remark-responsive-iframe`,
-            options: {
-              wrapperStyle: `margin-bottom: 1.0725rem`,
-            },
-          },
-          `gatsby-remark-prismjs`,
-          `gatsby-remark-copy-linked-files`,
-          `gatsby-remark-smartypants`,
-        ],
+        name: "images",
+        path: "./src/images/",
       },
+      __key: "images",
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
-    `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-gatsby-cloud`,
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: "gatsby-source-filesystem",
       options: {
-        start_url: "/",
-        icon: `./src/content/images/square.png`,
-        crossOrigin: `use-credentials`,
+        name: "pages",
+        path: "./src/pages/",
       },
+      __key: "pages",
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "content",
+        path: "./src/content/",
+      },
+      __key: "pages",
     },
   ],
 }

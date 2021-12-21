@@ -1,12 +1,11 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 import styled from "styled-components"
 import Social from "./Social"
 import { v4 as uuidv4 } from "uuid"
-import banner from "../content/images/banner.jpg"
-import StyledInternalLink from "../components/StyledInternalLink"
+import banner from "../images/banner.jpg"
 
-const Navbar: React.FC = () => {
+const Navbar = () => {
   const query = useStaticQuery(graphql`
     query NavbarQuery {
       site {
@@ -27,17 +26,15 @@ const Navbar: React.FC = () => {
 
   return (
     <Style banner={banner}>
-      <div className="title">
-        <StyledInternalLink to="/" color="#fff">
-          {query.site.siteMetadata.title}
-        </StyledInternalLink>
-      </div>
+      <Link to="/" className="title">
+        {query.site.siteMetadata.title}
+      </Link>
       <div className="socials">{socials}</div>
     </Style>
   )
 }
 
-const Style = styled.nav<{ banner: string }>`
+const Style = styled.nav`
   display: grid;
   grid-template-columns: repeat(1, minmax(0, 1fr));
   grid-template-rows: repeat(2, minmax(0, 1fr));
@@ -50,7 +47,6 @@ const Style = styled.nav<{ banner: string }>`
   background-blend-mode: darken;
   background-position: center;
   background-size: cover;
-
   .title {
     display: flex;
     justify-content: center;
@@ -60,12 +56,12 @@ const Style = styled.nav<{ banner: string }>`
     transition-property: all;
     transition-duration: 300ms;
     transition-timing-function: ease-in-out;
-
+    color: white;
+    text-decoration: none;
     &:hover {
       transform: scale(0.95);
     }
   }
-
   .socials {
     display: flex;
     justify-content: center;

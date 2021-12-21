@@ -1,24 +1,11 @@
 import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
 import { FaSkull } from "@react-icons/all-files/fa/FaSkull"
 import { FaGithubAlt } from "@react-icons/all-files/fa/FaGithubAlt"
 import { FaInstagram } from "@react-icons/all-files/fa/FaInstagram"
 import { FaTwitter } from "@react-icons/all-files/fa/FaTwitter"
 import styled from "styled-components"
 
-const Social = ({ icon, link, id }: any) => {
-  const query = useStaticQuery(graphql`
-    query SocialQuery {
-      site {
-        siteMetadata {
-          colors {
-            secondary
-          }
-        }
-      }
-    }
-  `)
-
+const Social = ({ icon, link, id }) => {
   let socialIcon
 
   switch (icon) {
@@ -36,21 +23,20 @@ const Social = ({ icon, link, id }: any) => {
   }
 
   return (
-    <Style
-      color={query.site.siteMetadata.colors.secondary}
-      href={link}
-      target="_blank"
-      rel="noreferrer"
-      key={id}
-    >
+    <Style color={`#000`} href={link} target="_blank" rel="noreferrer" key={id}>
       {socialIcon}
     </Style>
   )
 }
 
-const Style = styled.a<{ color: string }>`
+const Style = styled.a`
   text-decoration: none;
-  color: ${props => props.color};
+  color: hsla(
+    var(--secondary-h),
+    var(--secondary-s),
+    var(--secondary-l),
+    var(--secondary-a)
+  );
   font-size: 1.875rem;
   line-height: 2.25rem;
   padding-left: 0.75rem;
@@ -59,7 +45,6 @@ const Style = styled.a<{ color: string }>`
   transition-property: all;
   transition-duration: 300ms;
   transition-timing-function: ease-in-out;
-
   &:hover {
     transform: scale(1.25);
   }
