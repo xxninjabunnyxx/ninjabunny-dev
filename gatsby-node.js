@@ -71,7 +71,10 @@ const createPostListPages = async ({ graphql, actions }) => {
   const postsPerPage = 10
   const totalCountQuery = await graphql(`
     query TotalPostsQuery {
-      allMdx {
+      allMdx(
+        filter: {frontmatter: {published: {eq: true}, type: {eq: "post"}}}
+        sort: {fields: frontmatter___date, order: DESC}
+      ) {
         pageInfo {
           totalCount
         }

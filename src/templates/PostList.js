@@ -32,7 +32,7 @@ const PostListTemplate = ({ data }) => {
 export const query = graphql`
   query ($skip: Int, $postsPerPage: Int) {
     allMdx(
-      filter: { frontmatter: { type: { eq: "post" } } }
+      filter: {frontmatter: {published: {eq: true}, type: {eq: "post"}}}
       limit: $postsPerPage
       skip: $skip
     ) {
