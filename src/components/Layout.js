@@ -1,5 +1,6 @@
 import React from "react"
 import Navbar from "./Navbar"
+import CategoriesBar from "./CategoriesBar"
 import Global from "../styles/global"
 import styled from "styled-components"
 
@@ -8,6 +9,7 @@ const Layout = ({ children }) => {
     <>
       <Global />
       <Navbar />
+      <CategoriesBar />
       <Style>
         <div className="center">{children}</div>
       </Style>

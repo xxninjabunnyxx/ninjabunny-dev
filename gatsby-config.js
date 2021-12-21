@@ -8,11 +8,36 @@ module.exports = {
       { link: "https://twitter.com/xxninjabunnyxx", icon: "twitter" },
     ],
     colors: {
-      light: "#fff",
-      dark: "#000",
-      primary: "#B22176",
-      secondary: "#DDCBFF",
+      light: {
+        h: `0`,
+        s: `100%`,
+        l: `100%`,
+        a: `1`,
+      },
+      dark: {
+        h: `0`,
+        s: `0%`,
+        l: `0%`,
+        a: `1`,
+      },
+      primary: {
+        h: `326`,
+        s: `100%`,
+        l: `50%`,
+        a: `1`,
+      },
+      secondary: {
+        h: `261`,
+        s: `100%`,
+        l: `90%`,
+        a: `1`,
+      },
     },
+    categories: [
+      { name: `Blog`, path: `/blog` },
+      { name: `About`, path: `/about` },
+      { name: `Projects`, path: `/projects` },
+    ],
   },
   plugins: [
     "gatsby-plugin-styled-components",

@@ -7,8 +7,8 @@ import { MDXRenderer } from "gatsby-plugin-mdx"
 
 const IndexPage = () => {
   const query = useStaticQuery(graphql`
-    query MyQuery {
-      mdx(frontmatter: { page: { eq: "Index" } }) {
+    query IndexPageQuery {
+      mdx(frontmatter: { title: { eq: "Index" }, type: { eq: "page" } }) {
         id
         body
       }
