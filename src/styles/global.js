@@ -28,16 +28,6 @@ const Global = createGlobalStyle`
   --secondary-a: ${colors.secondary.a};
 }
 
-@font-face {
-    font-family: "Roboto";
-    src: url(${Roboto});
-}
-
-@font-face {
-    font-family: "Futura";
-    src: url(${Futura});
-}
-
   body {
     margin: 0;
     padding: 0;

@@ -3,6 +3,7 @@ import Navbar from "./Navbar"
 import CategoriesBar from "./CategoriesBar"
 import Global from "../styles/global"
 import styled from "styled-components"
+import "../styles/fonts.css"
 
 const Layout = ({ children }) => {
   return (
