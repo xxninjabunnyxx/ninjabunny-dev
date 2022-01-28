@@ -12,7 +12,7 @@ const PostTemplate = ({ data }) => {
       <Style>
         <h1 className="title">{data.mdx.frontmatter.title}</h1>
         <h3 className="title">{data.mdx.frontmatter.date}</h3>
-        <MDXRenderer>{data.mdx.body}</MDXRenderer>
+        <MDXRenderer localImages={data.mdx.frontmatter.embeddedImagesLocal}>{data.mdx.body}</MDXRenderer>
       </Style>
     </Layout>
   )
@@ -33,6 +33,11 @@ export const query = graphql`
       frontmatter {
         title
         date(formatString: "MM-DD-YYYY")
+        embeddedImagesLocal {
+          childImageSharp {
+            gatsbyImageData(layout: FULL_WIDTH)
+          }
+        }
       }
     }
   }
