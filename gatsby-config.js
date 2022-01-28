@@ -6,6 +6,8 @@ module.exports = {
       { link: "https://github.com/xxninjabunnyxx", icon: "github" },
       { link: "https://instagram.com/ryurampage", icon: "instagram" },
       { link: "https://twitter.com/xxninjabunnyxx", icon: "twitter" },
+      { link: "https://galaxy.ansible.com/xxninjabunnyxx", icon: "ansible" },
+      { link: "https://hub.docker.com/u/xxninjabunnyxx", icon: "docker" },
     ],
     colors: {
       light: {
@@ -73,7 +75,7 @@ module.exports = {
         name: "content",
         path: "./src/content/",
       },
-      __key: "pages",
+      __key: "content",
     },
   ],
 }

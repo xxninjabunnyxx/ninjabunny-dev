@@ -3,6 +3,8 @@ import { FaSkull } from "@react-icons/all-files/fa/FaSkull"
 import { FaGithubAlt } from "@react-icons/all-files/fa/FaGithubAlt"
 import { FaInstagram } from "@react-icons/all-files/fa/FaInstagram"
 import { FaTwitter } from "@react-icons/all-files/fa/FaTwitter"
+import { SiAnsible } from "@react-icons/all-files/si/SiAnsible"
+import { FaDocker } from "@react-icons/all-files/fa/FaDocker"
 import styled from "styled-components"
 
 const Social = ({ icon, link, id }) => {
@@ -17,6 +19,12 @@ const Social = ({ icon, link, id }) => {
       break
     case `twitter`:
       socialIcon = <FaTwitter />
+      break
+    case `ansible`:
+      socialIcon = <SiAnsible />
+      break
+    case `docker`:
+      socialIcon = <FaDocker />
       break
     default:
       socialIcon = <FaSkull />
