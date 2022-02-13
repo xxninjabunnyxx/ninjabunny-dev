@@ -36,23 +36,25 @@ const createSinglePages = async ({ graphql, actions }) => {
 const createPostPages = async ({ graphql, actions }) => {
   const template = path.resolve("./src/templates/Post.js")
   const { data } = await graphql(`
-  query AllPostsQuery {
-    allMdx(
-      filter: {frontmatter: {published: {eq: true}, type: {eq: "post"}}}
-      sort: {fields: frontmatter___date, order: DESC}
-    ) {
-      edges {
-        node {
-          id
-          slug
-          frontmatter {
-            title
-            date
+    query AllPostsQuery {
+      allMdx(
+        filter: {
+          frontmatter: { published: { eq: true }, type: { eq: "post" } }
+        }
+        sort: { fields: frontmatter___date, order: DESC }
+      ) {
+        edges {
+          node {
+            id
+            slug
+            frontmatter {
+              title
+              date
+            }
           }
         }
       }
     }
-  }  
   `)
 
   data.allMdx.edges.forEach(mdx => {
@@ -72,8 +74,10 @@ const createPostListPages = async ({ graphql, actions }) => {
   const totalCountQuery = await graphql(`
     query TotalPostsQuery {
       allMdx(
-        filter: {frontmatter: {published: {eq: true}, type: {eq: "post"}}}
-        sort: {fields: frontmatter___date, order: DESC}
+        filter: {
+          frontmatter: { published: { eq: true }, type: { eq: "post" } }
+        }
+        sort: { fields: frontmatter___date, order: DESC }
       ) {
         pageInfo {
           totalCount

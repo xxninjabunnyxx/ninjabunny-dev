@@ -23,17 +23,17 @@ const Style = styled.div`
     font-weight: normal;
     font-style: normal;
   }
-  `
+`
 
 export const query = graphql`
-query ( $id: String ) {
-  mdx(id: {eq: $id }) {
-    body
-    frontmatter {
-      title
+  query ($id: String) {
+    mdx(id: { eq: $id }) {
+      body
+      frontmatter {
+        title
+      }
     }
   }
-}
 `
 
 export default SinglePageTemplate
