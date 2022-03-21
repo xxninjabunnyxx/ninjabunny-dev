@@ -1,0 +1,21 @@
+---
+title: "Vewlix Build Log: HDCP Check"
+date: 2021-12-15
+published: true
+type: post
+embeddedImagesLocal:
+  - "./IMG_0259.jpg"
+  - "./IMG_0260.jpg"
+---
+
+import { getImage, GatsbyImage } from "gatsby-plugin-image"
+
+<GatsbyImage alt="PS4 Video" image={getImage(props.localImages[0])} />
+
+One of the things I wanted to do with these cabinets is to be able to put anything I want into them, so when I opened up the back I saw the monitor only had a DVI and VGA connector which had me a little bit worried. DVI and HDMI both use the same TDMS signals to carry their video and audio but since this didn’t have an HDMI port I was worried that it didn’t support HDCP meaning that none of my modern systems would run on it without any kind of modification to the video chain.
+
+hooking up the PS4 was relatively simple; it just involved me splitting the audio out of the HDMI and sending it to a separate audio amplifier and getting an HDMI to DVI adapter.
+
+<GatsbyImage alt="PS4 Video" image={getImage(props.localImages[1])} />
+
+The real test is when I ran an HDCP enabled application on the cabinets and I was pleasantly surprised that it worked flawlessly.
